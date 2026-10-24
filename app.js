@@ -32,6 +32,7 @@
     ig: '<svg viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".6"/></svg>',
     wa: '<svg viewBox="0 0 24 24"><path d="M4 20l1.2-4A8.5 8.5 0 1 1 8.4 19z"/><path d="M9 8.5c0 3.5 3 6.5 6.5 6.5l1-1.6-2-1-1 .9a5 5 0 0 1-2.3-2.3l.9-1-1-2z"/></svg>',
     phone: '<svg viewBox="0 0 24 24"><path d="M6.5 3.5h3l1.5 4-2 1.3a10 10 0 0 0 6.2 6.2l1.3-2 4 1.5v3a2 2 0 0 1-2 2A16 16 0 0 1 4.5 5.5a2 2 0 0 1 2-2z"/></svg>',
+    group: '<svg viewBox="0 0 24 24"><circle cx="9" cy="9" r="3.2"/><circle cx="16.5" cy="10" r="2.6"/><path d="M3.5 19c.8-3 3-4.6 5.5-4.6s4.7 1.6 5.5 4.6M14.5 14.6c.7-.3 1.4-.4 2-.4 2.1 0 3.8 1.3 4.5 3.8"/></svg>',
     arrow: '<svg class="arrow" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg>',
     check: '<svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>'
   };
@@ -504,6 +505,8 @@
     $("steps").innerHTML = (S.steps || []).map(function (s) { return "<li>" + esc(s) + "</li>"; }).join("");
     var rows = [];
     if (S.telegram) rows.push(contactRow(tgLink(), ICONS.tg, "Telegram", "@" + S.telegram, 'data-tg="1" target="_blank" rel="noopener"'));
+    if (S.telegramGroup) rows.push(contactRow(S.telegramGroup, ICONS.group, "Группа в Telegram",
+      S.telegramGroupLabel || S.telegramGroup.replace(/^https?:\/\//, ""), 'target="_blank" rel="noopener"'));
     if (S.instagram) rows.push(contactRow("https://instagram.com/" + S.instagram, ICONS.ig, "Instagram", "@" + S.instagram, 'target="_blank" rel="noopener"'));
     if (S.whatsapp) rows.push(contactRow(waLink(), ICONS.wa, "WhatsApp", S.whatsapp, 'target="_blank" rel="noopener"'));
     if (S.phone) rows.push(contactRow("tel:" + S.phone.replace(/[^\d+]/g, ""), ICONS.phone, "Позвонить", S.phone));
