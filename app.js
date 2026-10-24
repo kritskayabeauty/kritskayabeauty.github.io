@@ -505,7 +505,7 @@
     $("steps").innerHTML = (S.steps || []).map(function (s) { return "<li>" + esc(s) + "</li>"; }).join("");
     var rows = [];
     if (S.telegram) rows.push(contactRow(tgLink(), ICONS.tg, "Telegram", "@" + S.telegram, 'data-tg="1" target="_blank" rel="noopener"'));
-    if (S.telegramGroup) rows.push(contactRow(S.telegramGroup, ICONS.group, "Группа в Telegram",
+    if (S.telegramGroup) rows.push(contactRow(S.telegramGroup, ICONS.group, "Канал в Telegram",
       S.telegramGroupLabel || S.telegramGroup.replace(/^https?:\/\//, ""), 'target="_blank" rel="noopener"'));
     if (S.instagram) rows.push(contactRow("https://instagram.com/" + S.instagram, ICONS.ig, "Instagram", "@" + S.instagram, 'target="_blank" rel="noopener"'));
     if (S.whatsapp) rows.push(contactRow(waLink(), ICONS.wa, "WhatsApp", S.whatsapp, 'target="_blank" rel="noopener"'));

@@ -10,9 +10,9 @@ window.SITE = {
 
   // Telegram жены без @. На этот аккаунт клиентки будут писать с кнопки «Записаться».
   telegram: "kkkritskaya",
-  // Группа в Telegram: полная ссылка https://t.me/... и подпись. Пусто: строки нет
-  telegramGroup: "",
-  telegramGroupLabel: "",
+  // Канал (или группа) в Telegram: полная ссылка https://t.me/... и подпись. Пусто: строки нет
+  telegramGroup: "https://t.me/kritskayabeauty",
+  telegramGroupLabel: "@kritskayabeauty",
   phone: "",                   // например "+7 900 000-00-00". Пусто: кнопки «Позвонить» нет
   instagram: "kritskaya.beauty", // ник без @, можно пустым. Появится кнопка «Написать в Direct»
   whatsapp: "",                // номер, например "+7 900 000-00-00", можно пустым
