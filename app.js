@@ -192,7 +192,7 @@
   // Высота кадра по свободному месту: экран минус верхняя строка, заголовок блока и кнопка записи,
   // чтобы название и кадр целиком помещались на один экран
   function fitLooks() {
-    var nav = ($("topnav") || {}).offsetHeight || 52;
+    var nav = ($("topnav") || {}).offsetHeight || 52; // в Telegram уже с отступом под его кнопки
     var cta = document.body.classList.contains("in-tg") ? 16 : 96;
     Array.prototype.forEach.call(document.querySelectorAll(".look"), function (look) {
       var head = look.querySelector(".look-head, .look-sep");
@@ -639,6 +639,11 @@
     tg.MainButton.onClick(function () { book(); });
     tg.BackButton.onClick(closeLightbox);
     updateCta();
+    // Отступы под кнопки Telegram приходят чуть позже и меняются при повороте: пересчитываем кадры
+    ["safeAreaChanged", "contentSafeAreaChanged", "fullscreenChanged", "viewportChanged"].forEach(function (ev) {
+      try { tg.onEvent(ev, fitLooks); } catch (e) {}
+    });
+    setTimeout(fitLooks, 300);
   }
   if (isMiniApp) {
     var tgs = document.createElement("script");
