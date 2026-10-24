@@ -25,7 +25,7 @@
 
 1. В репозитории на GitHub: **Settings → Pages → Build and deployment → Source: GitHub Actions**.
 2. Публикация запускается сама при каждом изменении в ветке `main`.
-3. Адрес сайта: `https://egorkiczkij.github.io/kritskaya-beauty/`.
+3. Адрес сайта: `https://kritskayabeauty.github.io/`.
 
 Картинка превью уже прописана в `og:image` в `index.html`. Если сайт переедет на другой адрес, поменяйте ссылку там же, иначе Instagram и Telegram покажут ссылку без картинки.
 
@@ -37,7 +37,7 @@
 
 ## 5. Поставить в Instagram
 
-В шапку профиля ставьте адрес сайта `https://egorkiczkij.github.io/kritskaya-beauty/`, а не ссылку на бота. Ссылка `t.me/...` из Instagram сначала откроет страницу Telegram, а у кого Telegram нет, портфолио не увидят вовсе.
+В шапку профиля ставьте адрес сайта `https://kritskayabeauty.github.io/`, а не ссылку на бота. Ссылка `t.me/...` из Instagram сначала откроет страницу Telegram, а у кого Telegram нет, портфолио не увидят вовсе.
 
 [@BotFather]: https://t.me/BotFather
 
